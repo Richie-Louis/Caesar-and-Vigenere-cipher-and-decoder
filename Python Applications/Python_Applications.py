@@ -144,6 +144,7 @@ def VigenereCoder(string, keyword):
 #    print(index , alphabet[index])
 # print((16 + 10) % 26)
 
-print(VigenereDecoder("ic pb dschqb. zyv, l ubm dejf nr gcdcskcs srxp digh. gu qdv ovcwh y dbdojfhjh zvn l vssy kdb goq gmjhj lr. j brsc xy fdl diqwgooh wm tyqg kfmvdefm olif nklq. j bdg y hirg rjgh dle cp vssy brs ecg dq xyoo.", "buddy"))
+#print(VigenereDecoder("ic pb dschqb. zyv, l ubm dejf nr gcdcskcs srxp digh. gu qdv ovcwh y dbdojfhjh zvn l vssy kdb goq gmjhj lr. j brsc xy fdl diqwgooh wm tyqg kfmvdefm olif nklq. j bdg y hirg rjgh dle cp vssy brs ecg dq xyoo.", "buddy"))
 
-print(VigenereCoder("hi my friend. yes, i was able to decipher your code. it was quite a challenge but i sure had fun doing it. i hope we can continue to send messages like this. i had a good time and i'm sure you did as well.","buddy")) 
+#print(VigenereCoder("hi my friend. yes, i was able to decipher your code. it was quite a challenge but i sure had fun doing it. i hope we can continue to send messages like this. i had a good time and i'm sure you did as well.","buddy")) 
+
