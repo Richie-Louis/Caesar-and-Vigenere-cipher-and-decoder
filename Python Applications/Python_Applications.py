@@ -65,7 +65,7 @@ def VigenereDecoder(string, keyword):
     for s in string:
         for index in range(len(alphabet)):
             if s == alphabet[index]:
-                decode += alphabet[index - alphabet.index(test[j])]
+                decode += alphabet[(index - alphabet.index(test[j])) % 26]
                 j += 1
             elif s == " ":
                 decode += " "
@@ -76,7 +76,45 @@ def VigenereDecoder(string, keyword):
             elif s == '!':
                 decode += '!'
                 break
+            elif s == '.':
+                decode += '.'
+                break
+            elif s == ',':
+                decode += ','
+                break
 
+    return decode
+
+def VigenereCoder(string, keyword):
+    decode = ""
+    test = ""
+    i = 0
+    for index in range(len(string)):
+        test += keyword[i]
+        i += 1
+        if i >= len(keyword):
+            i = 0
+    j = 0
+    for s in string:
+        for index in range(len(alphabet)):
+            if s == alphabet[index]:
+                decode += alphabet[(index + alphabet.index(test[j])) % 26]
+                j += 1
+            elif s == " ":
+                decode += " "
+                break
+            elif s == '?':
+                decode += '?'
+                break
+            elif s == '!':
+                decode += '!'
+                break
+            elif s == '.':
+                decode += '.'
+                break
+            elif s == ',':
+                decode += ','
+                break
     return decode
 
     #for s in string:
@@ -106,4 +144,6 @@ def VigenereDecoder(string, keyword):
 #    print(index , alphabet[index])
 # print((16 + 10) % 26)
 
-print(VigenereDecoder("dfc aruw fsti gr vjtwhr wznj? vmph otis! cbx swv jipreneo uhllj kpi rahjib eg fjdkwkedhmp!", "friends"))
+print(VigenereDecoder("ic pb dschqb. zyv, l ubm dejf nr gcdcskcs srxp digh. gu qdv ovcwh y dbdojfhjh zvn l vssy kdb goq gmjhj lr. j brsc xy fdl diqwgooh wm tyqg kfmvdefm olif nklq. j bdg y hirg rjgh dle cp vssy brs ecg dq xyoo.", "buddy"))
+
+print(VigenereCoder("hi my friend. yes, i was able to decipher your code. it was quite a challenge but i sure had fun doing it. i hope we can continue to send messages like this. i had a good time and i'm sure you did as well.","buddy")) 
